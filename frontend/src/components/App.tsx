@@ -10,9 +10,14 @@ export default function App(){
         <input type='color' onChange={(e)=>{
           setCurr(e.target.value)
           console.log(e.target.value)
-        }} className={`border border-black rounded-lg p-2 w-4/5 h-4/5 bg-[${curr}]`} />
+        }} className={`border border-black rounded-lg p-2 w-4/5 h-4/5 bg-[${curr.trim()}]`} />
+        <div className={`border border-black rounded-lg p-2 text-[${curr.trim()}]`}>
+          <p>Preview</p>
+          <div className={`w-4/5 h-4/5 bg-[${curr}]`}>
+
+          </div>
+        </div>
         <p>HEX value: {curr}</p>
-        <div className={`w-4/5 h-4/5 bg-[${curr}]`}></div>
     </div>
     <Github repoURL='A' profileURL='A' />
     </div>
