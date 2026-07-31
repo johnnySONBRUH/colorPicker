@@ -2,12 +2,12 @@ import './App.css'
 import {useState} from 'react'
 import Github from './Github'
 export default function App(){
-  const [curr,setCurr] = useState("")
+  const [curr,setCurr] = useState("#000000")
   return (
     <div className='font-["Comic_Sans_MS"]'>
       <div className='flex justify-center items-center flex-col'>
         <p>Color Picker</p>
-        <input type='color' onChange={(e)=>{
+        <input type='color' value={curr} onChange={(e)=>{
           setCurr(e.target.value)
           console.log(e.target.value)
         }} className={`border border-black rounded-lg p-2 w-4/5 h-4/5 bg-[${curr.trim()}]`} />
